@@ -1,0 +1,19 @@
+center
+
+% Tweak MAKE_JOBS
+
+* Multiple chroots helped a lot, but now slowed down by
+  individual packages taking ages (in an 18 hour build,
+  7.5 hours taken up by failing lang/mercury build).
+
+* Configure ~MAKE_JOBS~ based on ~PKGPATH~:
+
+    ~MAKE_JOBS=2~  (default)
+    ~MAKE_JOBS=4~  (268 packages, general speedup)
+    ~MAKE_JOBS=6~  (just webkit*)
+    ~MAKE_JOBS=8~  (21 highly dependent packages, e.g. gcc)
+
+* With a lot of trial and error achieve a decent return:
+
+    June 2013:    ~11,372 packages in 18 hours~
+    August 2014:  ~14,017 packages in 12 hours~

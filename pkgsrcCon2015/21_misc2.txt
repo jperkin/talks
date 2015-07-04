@@ -1,0 +1,21 @@
+center
+
+% Miscellaneous Work #2
+
+* Adding new bulk builds:
+
+  * Setting up regular SmartOS testing (~PKGSRC_RUN_TEST~)
+    and staging (latest SmartOS release) bulk builds.
+
+  * OSX packages getting more popular, ~30,000~ downloads
+    since 2015Q1.  Two additional MBPs for regular builds.
+
+  * Regular Linux builds (32-bit + 64-bit CentOS 6).
+
+* New pkgsrc.joyent.com website.  Now supports HTTPS.
+
+* Filip finished OpenJDK8 port last night.
+
+* Lots more multiarch porting (now over 13,000 packages).
+
+* Lots I've forgotten!

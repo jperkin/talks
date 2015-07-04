@@ -1,0 +1,20 @@
+center
+
+% A Quick Recap - SmartOS
+
+* SmartOS is a distribution of illumos, the open source
+  successor to Solaris (now closed/proprietary).
+
+* SmartOS is designed for virtualisation, main zone (global)
+  is a live image hypervisor with all work performed inside
+  secure zones, each with their own IP stack, etc.
+
+* Each zone contains a pkgsrc bootstrap kit plus a set of
+  pre-installed packages, and pkgin for installing the rest.
+
+* Users choose from a set of 26 zone images (minimal, base,
+  couchdb, ...).  Version number denotes pkgsrc branch, e.g.
+  ~15.2.x~ version images are based on ~pkgsrc-2015Q2~.
+
+* Many zones running in Joyent Public Cloud + growing # of
+  SmartOS users = ~5 million~ package downloads since 2012.

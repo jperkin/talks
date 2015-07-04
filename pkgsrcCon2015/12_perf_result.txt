@@ -1,0 +1,24 @@
+center
+
+% Performance results
+
+* In total has significantly reduced bulk build time:
+
+    October 2012: ~10,634~ builds in ~48 hours~.
+    October 2014: ~14,162~ builds in ~4.5 hours~.
+
+* Can we improve any further, under 4 hours possible?
+
+  * More hosts (easy but costs more, diminishing return)
+
+  * make(1) caching would be a massive win
+
+  * Continue tweaking MAKE_JOBS.  Package build times are
+    logged, could do with dependency analysis to start heavy
+    dependents as early as possible.
+
+  * Stop building libnbcompat so many times.
+
+  * Replace /bin/sh (ksh93) in build chroots.
+
+* DTrace massively helpful in analysis.

@@ -1,0 +1,20 @@
+center
+
+% Signed Packages
+
+* Many users expect this and HTTPS by default in 2015.
+
+* Signing packages is straight-forward thanks to the work by
+  others previously.
+
+  * Make sure gpg binary is available.  Create key.
+
+  * Add SIGN_PACKAGES=gpg to mk.conf.
+
+  * Configure ~GPG~ and ~GPG_SIGN_AS~ in pkg_install.conf.
+
+* Build chroots have gpg-agent socket mounted, fully
+  automated (we build a lot, manual process unacceptable).
+
+* OS X currently manual, no way that I've found to mount
+  agent socket in chroots (also impacts name resolution).

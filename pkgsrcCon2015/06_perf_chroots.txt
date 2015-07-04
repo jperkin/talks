@@ -1,0 +1,22 @@
+center
+
+% Use Multiple Chroots Per Build
+
+* Until mid-2013 using chroots only for concurrent branches.
+
+    /chroot/pkgsrc-2013Q2-i386
+    /chroot/pkgsrc-2013Q1-i386
+
+* Realised (duh!) we could quite easily use multiple chroots
+  per build too.
+
+    /chroot/pkgsrc-2013Q1-i386
+    /chroot/pkgsrc-2013Q2-i386-build1
+    /chroot/pkgsrc-2013Q2-i386-build2
+    /chroot/pkgsrc-2013Q2-i386-buildN
+
+* Also means significant improvement in scan time (with 24
+  chroots per host full scan takes 10 minutes).
+
+    September 2012: ~10,634 packages in 48 hours~
+    June 2013:      ~11,372 packages in 18 hours~

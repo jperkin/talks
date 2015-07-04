@@ -1,0 +1,23 @@
+center
+
+% Miscellaneous fork improvements
+
+* There are other ways to reduce forking.
+
+  * ~cat~ => ~echo~
+  * ~dirname~ => ~${file%/*}~
+  * ~rm -f file~ => ~[ -e file ] && rm -f file~
+
+* Speeds up ~bmake wrapper~ generation ~3x~.
+
+* TODO: integrate ln(1) optimisation, reducing:
+
+    ln -s /usr/pkg/include/foo.h .buildlink/include/foo.h
+    ln -s /usr/pkg/include/bar.h .buildlink/include/bar.h
+    ln -s /usr/pkg/include/baz.h .buildlink/include/baz.h
+
+  to a single:
+
+    ln -s /usr/pkg/include/{foo,bar,baz}.h .buildlink/include/
+
+* x11/kde-workspace4 from ~2m11s~ to just ~19s~.

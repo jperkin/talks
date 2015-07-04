@@ -1,0 +1,12 @@
+{
+  "header": {
+    "center": "pkgsrcCon 2015 - pkgsrc At Joyent"
+  },
+  "footer": {
+    "left": "Jonathan Perkin",
+    "right": "\u2295 Joyent"
+  },
+  "fade": {
+    "delay": 10
+  }
+}

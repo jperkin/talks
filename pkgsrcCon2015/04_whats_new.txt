@@ -1,0 +1,15 @@
+center
+
+% What Have We Been Working On
+
+* Performance.
+
+* Signed packages.
+
+* Further integration with SmartOS features.
+
+* LTS (Long Term Support).
+
+* Open source 'pkgbuild'.
+
+* Many many smaller improvements and general updates.

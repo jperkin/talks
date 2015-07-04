@@ -1,0 +1,23 @@
+center
+
+% pkgbuild
+
+* Lots of our build infrastructure was private for a time,
+  made it impossible for users to reproduce our packages.
+
+* This year finally worked on a way to export the public
+  bits out into a repository:
+
+    ~https://github.com/joyent/pkgbuild/~
+
+* Includes everything needed to build:
+
+  * Bootstrap scripts.
+
+  * Per-branch configuration files.
+
+  * Jenkins configuration (config.xml).
+
+  * meta overlay (~INSTALL_TEMPLATES~, SMF manifests, etc).
+
+* Now includes Linux and OSX build infrastructure too.

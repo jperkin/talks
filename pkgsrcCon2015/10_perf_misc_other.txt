@@ -1,0 +1,21 @@
+center
+
+% Miscellaneous Other Improvements #1
+
+* Cache check-shlib system() results:
+
+    ~pkg_info -Fe file~ calls: ~5,809~ =>  ~114~
+    ~/bin/sh~ instances: ~95,612~ => ~3,028~
+    25x performance win: ~7m55s~ => ~18s~
+
+* Only run check-interpreter on executable files:
+
+    Single character change ~-f~ => ~-x~
+    50x performance win: ~1m36s~ => ~2s~
+
+* Switch to dash for default SHELL:
+
+    ~5hr 25m~ => ~5hr 10m~ bulk build
+
+* Would like to integrate either dash or mksh as new
+  default bootstrap shell (pdksh is ... not good)

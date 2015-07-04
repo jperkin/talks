@@ -1,0 +1,21 @@
+center
+
+% pkgbuild features
+
+* Per-build ~pkgbuild.conf~, everything in scripts is
+  abstracted and generic.
+
+* Sandbox scripts for SmartOS/OSX/Linux, allows us to do
+  useful things like override system headers:
+
+    ~sys/epoll.h~ == ~#error "Do not use"~
+
+* ~pkgdev~ zone image includes everything users need to start
+  building/developing packages quickly:
+
+  ~zone$~ run-sandbox 2015Q2-i386
+  ~chroot$~ cd /shared/pkgsrc/mail/postfix
+  ~chroot$~ echo "PKG_OPTIONS.postfix+= pgsql" >>/opt/local/etc/mk.conf
+  ~chroot$~ bmake package
+  ~chroot$~ exit
+  ~zone$~ ls /shared/packages/SmartOS/2015Q2/i386/All/postfix-2.11.5nb1.tgz

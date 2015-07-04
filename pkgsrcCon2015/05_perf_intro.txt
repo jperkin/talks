@@ -1,0 +1,10 @@
+center
+
+% Performance
+
+* Back in 2013 "full bulk build in under 2 days".
+
+* Good, but wanted daily builds, and ideally even faster
+  for quick testing turnaround.
+
+* Turns out there's quite a lot we can do...

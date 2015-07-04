@@ -1,0 +1,23 @@
+center
+
+% A Quick Recap - GitHub
+
+* Development happens in our ~joyent/pkgsrc~ fork on GitHub.
+
+  * Aim is to upstream as much as possible.
+
+  * Anything which isn't ready goes into one of 3 feature
+    branches:
+
+      ~joyent/feature/miscfix/<branch>~     # General changes
+      ~joyent/feature/multiarch/<branch>~   # Multiarch work
+      ~joyent/feature/pbulkmulti/<branch>~  # MySQL/Percona
+
+   * All get merged into ~joyent/release/<branch>~, pushes to
+     release branches trigger Jenkins pbulk builds and new
+     packages on ~pkgsrc.joyent.com~
+
+* We add 200+ packages from ~pkgsrc-wip~ and ~pkgsrc-joyent~.
+
+ * We accept pull requests (~110~ handled, ~15~ open) and issues
+   (~132~ handled, ~50~ open) for people who prefer that route.

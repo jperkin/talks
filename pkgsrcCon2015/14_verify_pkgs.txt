@@ -1,0 +1,23 @@
+center
+
+% Verifying Signed Packages
+
+* Verifying packages not quite as straight-forward.
+
+  * Requires gpg installed on target host, bootstrap bloat.
+
+  * Can be flaky calling external programs (c.f. khorben's
+    recent patches)
+
+* security/libnetpgpverify by agc@ provides relief:
+
+  * Required a few fixes for subkeys (thanks Alastair)
+
+  * Link static library into pkg_install and verify inline.
+
+  * Small patch, in use since 2014Q4, but currently replaces
+    support for GPG verification.  Anyone want to keep it?
+
+* Our public key included in bootstrap kits, kits signed by
+  the same key, and available via https://pkgsrc.joyent.com/
+  so now end-to-end encryption for packages.

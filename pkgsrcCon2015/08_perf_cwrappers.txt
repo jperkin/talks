@@ -1,0 +1,22 @@
+center
+
+% cwrappers
+
+* Some platforms have more expensive fork() than others,
+  legacy wrappers do a ~_lot_~ of forking.
+
+* joerg@ wrote cwrappers but never integrated it, I helped
+  finish the last few bits and bring it into the tree.
+
+* Most packages saw ~1.5x~ - ~2x~ speedup, some ~3x+~
+
+* Significant reduction in system time allows more chroots
+  and MAKE_JOBS.  Have been using it since pkgsrc-2014Q4:
+
+    August 2014:     ~14,017 packages in 12 hours~
+    September 2014:  ~14,011 packages in 5.5 hours~
+
+* Add USE_CWRAPPERS=yes to mk.conf and send us bug reports,
+  let's make it the default.
+
+* TODO: Integrate OSX fixes.

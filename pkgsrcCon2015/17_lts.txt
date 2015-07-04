@@ -1,0 +1,23 @@
+center
+
+% Long Term Support
+
+* As we have so many zones in production, users tend to stick
+  with what's running and leave it.
+
+* Quite a few users still on very old package sets (2011Q4!),
+  and then OpenSSL comes along...
+
+* Backporting to every branch is untenable, come up with a
+  plan for LTS:
+
+  * Every year Q4 release will be marked LTS and supported
+    for 3 years.
+
+  * Continue to provide quarterly releases, but their support
+    will end with pkgsrc-releng.
+
+  * Critical fixes via ~joyent/feature/backports/<branch>~.
+
+* Still in infancy, haven't done as many backports as we'd
+  like.  Branch changes can make it tricky (~PHP_BASE_VERS~).

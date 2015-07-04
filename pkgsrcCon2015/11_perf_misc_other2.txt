@@ -1,0 +1,22 @@
+center
+
+% Miscellaneous Other Improvements #2
+
+* Avoid /bin/print in libtool (libtool used rather a lot).
+
+* Improve single threaded parts of bulk build:
+
+  * Add ~--make-jobs~ to bootstrap, saves a few minutes.
+
+  * Generate package checksums at package time (thus making
+    it a parallel operation), collating files at the end of
+    the build for SHA512.bz2
+
+  * Do the same for pkg_summary.gz, generating ~pkg_info -X~
+    at package time.
+
+* Reduces bulk build runtime by ~20 minutes~.
+
+* Remove mk.conf from SCAN_DEPENDS for ~reuse_scan_results~
+
+* Use ramdisks on OSX.

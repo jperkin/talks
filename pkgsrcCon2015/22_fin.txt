@@ -1,0 +1,11 @@
+center
+
+% Wrapping Up
+
+* How can we help?
+
+   * ~joyent/bulktest/upstream-trunk~ is accepting patches
+
+   * ~pkgsrc-dev.joyent.com~ available to developers
+
+* Questions?

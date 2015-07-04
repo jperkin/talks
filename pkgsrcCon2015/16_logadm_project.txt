@@ -1,0 +1,22 @@
+center
+
+% SmartOS Integration
+
+* Main integration was with SMF, which we finally committed
+  to pkgsrc.  Work ongoing to add manifests to packages.
+
+* Added support for logadm, simple install/deinstall scripts:
+
+    case ${STAGE} in
+    POST-INSTALL)
+        logadm -C 5 -c -s 100m -z 1 -w '@VARBASE@/log/mysql/*.log'
+        ;;
+    DEINSTALL)
+        logadm -r '@VARBASE@/log/mysql/*.log'
+        ;;
+    esac
+
+  * Need a good abstraction in pkgsrc to make this first-class.
+
+* Added project support (resource controls) into ~mk/smf.mk~,
+  configured via ~SMF_PROJECT_~ per-package variables.

@@ -1,0 +1,18 @@
+center
+
+% Verifying pkg-vulnerabilities
+
+* Now that we can verify packages, adding support for also
+  verifying pkg-vulnerabilities is easy.
+
+* Only small issue is that the pkgsrc-security@pkgsrc.org
+  key occasionally changes, and we don't want users to have
+  to go looking for the new one manually.
+
+* ~joyent/pkgsrc-gnupg-keys~ package contains the current key,
+  each time the key is updated we'll add it to the keyring,
+  bump the package version, users only need ~'pkgin upgrade'~.
+
+* Just needs adding to pkg_install.conf
+
+  ~GPG_KEYRING_PKGVULN=/opt/local/share/gnupg/pkgsrc-security.gpg~

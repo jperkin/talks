@@ -1,0 +1,22 @@
+center
+
+% A Quick Recap - Package Sets
+
+* 4 sets for each branch: tools, i386, x86_64, multiarch.
+
+* Tools ~PREFIX=/opt/tools~, built from previous x86_64
+  branch release.  Provides pbulk, bootstrap GCC, etc.
+
+* The rest ~PREFIX=/opt/local~, using ~/opt/tools~ for
+  bootstrap utilities.
+
+* Multiarch combines 32-bit + 64-bit libraries into one
+  package.
+
+* Up until ~pkgsrc-2014Q3~ built on an older branch of SmartOS
+  and will run on basically any release.
+
+* ~pkgsrc-2014Q4~ onwards require running our ~20141030~ release
+  or newer.
+
+* ~pkgsrc-2014Q3~ / ~14.3.x~ slowly being deprecated.

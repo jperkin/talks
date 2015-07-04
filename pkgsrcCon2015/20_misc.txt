@@ -1,0 +1,21 @@
+center
+
+% Miscellaneous Work
+
+* Link all binaries against ~libumem~.
+
+  * Legacy wrappers have ~_WRAP_EXTRA_ARGS.CC~ etc.
+
+  * I added ~CWRAPPERS_LDADD~, need to convince joerg.
+
+* Various changes to our ~lang/gcc47~
+
+  * Support our multiarch ~ABI~ environment variable.
+
+  * Forcibly disable ~-fomit-frame-pointer~, no more useless
+    core dumps!
+
+* Optimised ~REQUIRES~ on SmartOS, now only records direct
+  dependencies (~DT_NEEDED~) rather than full ldd(1) output.
+
+* Additional ~CHECK_WRKREF~ checks, enforce correctness.
